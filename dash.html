@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>my profile</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            background-color: rgb(84, 100, 150);
+        }
+        
+        #menu {
+            list-style-type: none;
+            float: right;
+            margin-top: -30px;
+        }
+        
+        #profile {
+            list-style-type: none;
+        }
+        
+        #menu li {
+            padding: 2px;
+            display: inline-block;
+        }
+        
+        nav {
+            background-color: black;
+            color: antiquewhite;
+            padding: 10px;
+        }
+        
+        .row {
+            padding: 5px;
+        }
+        
+        div.main {
+            width: 80%;
+            background-color: whitesmoke;
+            box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 6px 20px 0px rgba(0, 0, 0, 0.19);
+        }
+        
+        @media only screen and (max-width:500px) {
+            img {
+                width: 100%;
+                height: 200px;
+                /*  margin-top: -7.5px;*/
+            }
+            div.main {
+                margin-left: 32px;
+            }
+            .profile {
+                background: white;
+                width: 80%;
+                overflow: auto;
+                color: grey;
+                margin-bottom: 10px;
+                padding: 5px;
+                margin-left: 32px;
+                margin-top: -10px
+            }
+            .form {
+                z-index: 30;
+                width: 80%;
+                margin-left: 32px;
+            }
+            video {
+                width: 100%;
+                height: 285px;
+                margin-top: -60px;
+            }
+            .col-md-2 {
+                display: none;
+            }
+        }
+        
+        @media only screen and (min-width:500px) {
+            video {
+                width: 100%;
+                height: 285px;
+            }
+            img {
+                width: 100%;
+                height: 350px;
+                /*margin-top: -7.5px;*/
+            }
+            .form {
+                z-index: 20px;
+                width: 80%;
+                margin-left: 45px;
+                margin-bottom: 10px;
+            }
+            div.main {
+                margin-left: 45px;
+            }
+            .profile {
+                background: white;
+                width: 80%;
+                overflow: auto;
+                color: grey;
+                margin-bottom: 10px;
+                padding: 5px;
+                margin-left: 45px;
+            }
+        }
+        
+        div.second {
+            padding: 10px 20px;
+        }
+        
+        .fa {
+            color: tomato;
+            font-size: 2em;
+        }
+        
+        .plus {
+            margin-top: -10px;
+        }
+        
+        #profi {
+            margin: 50px;
+        }
+        
+        ol {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        ol li {
+            display: flex;
+            align-items: center;
+        }
+        
+        .i {
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <nav class="navbar-inverse">
+                    <h4 class="brand"> graphers</h4>
+                    <ul id="menu">
+                        <li><button class="btn btn-info  btn-sm plus"><i class="fa fa-plus"></i> </button></li>
+                        <li><a href="index.html" class="text-white"> Home</a></li>
+                        <li>Log out</li>
+                    </ul>
+                </nav>
+                <div class=" card profile">
+                    <ul id="profile">
+
+                    </ul>
+
+                    <div class="" style="display: flex;">
+                        <button class="btn p-2"><a href="">photos</a><i class="fa fa-image p-2"></i></button>
+                        <button class="btn p-2"><a href="">friends</a><i class="fa fa-user p-2"></i></button>
+                    </div>
+                </div>
+
+                <div class="form bg-info p-1">
+                    <form method="POST" action="functions.php" enctype="multipart/form-data">
+                        <textarea name="caption" class="form-control" cols="80" rows="5" placeholder="update"></textarea>
+                        <input type="file" name="photo" id="photo" class="form-control" style="display:none" accept="/*">
+                        <i class="fa fa-image"></i>
+                        <i class="fa fa-rocket" style="float:right;"></i>
+                        <input type="submit" name="upload" value="send" id="send" class="btn btn-warning btn-sm text-white " style="display:none">
+                    </form>
+                </div>
+
+                <div class="top">
+
+                </div>
+
+
+
+            </div>
+
+
+            <div class="col-md-2"></div>
+        </div>
+
+    </div>
+</body>
+<script src="./jquery-3.4.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(() => {
+        $.ajax({
+            url: 'functions.php',
+            method: 'post',
+            data: {
+                'dash': 'dash'
+            },
+            success: (data) => {
+                $('.top').html(data);
+            }
+        });
+
+        $.ajax({
+            url: 'functions.php',
+            method: 'post',
+            data: {
+                'dashuser': 'dashuser'
+            },
+            success: (data) => {
+                $('#profile').html(data);
+            }
+        });
+
+        $(".fa-image").click(() => {
+            $("#photo").trigger("click");
+        });
+        $(".fa-rocket").click(() => {
+            $("#send").trigger("click");
+        });
+        $('button').click(() => {
+            $('.form').show();
+        });
+        $('.form').hide();
+
+    });
+</script>
+
+</html>

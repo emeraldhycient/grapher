@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>friends request</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: rgb(229, 236, 236);
+        }
+        
+        nav {
+            background-color: black;
+            color: antiquewhite;
+            padding: 5px;
+        }
+        
+        @media only screen and (max-width:500px) {
+            #menu {
+                display: none;
+            }
+            img {
+                width: 100%;
+                height: 200px;
+                margin-top: -7.5px;
+            }
+            #find {
+                position: relative;
+                float: right;
+                margin-right: 48px;
+                margin-top: -40px;
+                height: 65%;
+                background: rgba(196, 181, 181, 0.7);
+            }
+            #search {
+                position: absolute;
+                width: 50%;
+                margin-left: 110px;
+                margin-top: -40px;
+            }
+            footer {
+                display: flex;
+                padding: 10px;
+                /*height: 100vh;*/
+            }
+            .footer {
+                display: flex;
+                background-color: rgb(129, 136, 158);
+                height: 35px;
+            }
+            ul {
+                display: flex;
+                padding: 5px;
+                margin: auto;
+            }
+            ul li {
+                display: flex;
+                padding-left: 20px;
+                padding-right: 20px;
+                color: whitesmoke;
+                align-items: center;
+            }
+            ul li a {
+                display: flex;
+                align-items: center;
+                color: whitesmoke;
+            }
+            ul li a:hover {
+                display: flex;
+                align-items: center;
+                background-color: whitesmoke;
+                text-decoration: none;
+                color: rgb(148, 93, 165);
+            }
+            .row {
+                margin: auto;
+                width: 100%;
+                padding: 10px;
+            }
+            .col-md-6 img {
+                padding-top: 10px;
+                height: 200px;
+            }
+            .headicon {
+                display: flex;
+                padding: 2px;
+                align-items: center;
+                float: right;
+                margin-top: -10%;
+                margin-left: -40%;
+            }
+        }
+        
+        @media only screen and (min-width:500px) {
+            #menu {
+                list-style-type: none;
+                float: right;
+                margin-top: -35px;
+            }
+            img {
+                width: 100%;
+                height: 350px;
+                margin-top: -7.5px;
+            }
+            #find {
+                position: relative;
+                float: right;
+                margin-right: 210px;
+                margin-top: -40px;
+                height: 65%;
+                background: rgba(196, 181, 181, 0.7);
+            }
+            #search {
+                position: absolute;
+                width: 53%;
+                margin-left: 300px;
+                margin-top: -40px;
+                background-color: rgb(229, 236, 236);
+            }
+            footer {
+                display: flex;
+                padding: 10px;
+            }
+            .footer {
+                display: flex;
+                background-color: rgb(129, 136, 158);
+                height: 35px;
+            }
+            ul {
+                display: flex;
+                padding: 5px;
+                margin: auto;
+            }
+            ul li {
+                display: flex;
+                align-items: center;
+                padding-left: 100px;
+                color: whitesmoke;
+            }
+            ul li a {
+                display: flex;
+                align-items: center;
+                padding-left: 70px;
+                color: whitesmoke;
+            }
+            ul li a i:hover {
+                display: flex;
+                text-decoration: none;
+                background-color: whitesmoke;
+                color: tomato;
+            }
+            .row {
+                margin-left: auto;
+                width: 100%;
+                padding: 10px;
+            }
+            .col-md-6 img {
+                margin: auto;
+                width: 80%;
+                height: 150px;
+            }
+            .headicon {
+                display: flex;
+                padding: 2px;
+                align-items: center;
+                float: right;
+                margin-top: -3%;
+                margin-left: -40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar-inverse">
+            <h4 class="brand"> graphers</h4>
+            <div class="headicon">
+                <i class="fa fa-search m-2" onclick="openurl('searchpage.html')"></i>
+                <i class="fa fa-film m-2" onclick="openurl('videopage.html')"></i>
+                <i class="fa fa-envelope m-2" onclick="openurl('messages.php')"></i>
+                <i class="fa fa-bell m-2"></i>
+                <h6 id="menu" class="m-2">&#9777; </h6>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <div class="con">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer fixed-bottom">
+            <ul>
+                <li><a href="index.html"><i class="fa fa-home pr-2"></i></a></li>
+                <li><a href="request.html"><i class="fa fa-user-plus pr-2"></i></a></li>
+                <li>
+                    <a href="ad.html"><i class="fa fa-store pr-2"></i>Store</a>
+                </li>
+                <li>
+                    <a href="groups.html"><i class="fa fa-users pr-2"></i></a>
+                </li>
+                <li>
+                    <a href="dash.html"><i class="fa fa-user pr-2"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script src="./jquery-3.4.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+    function openurl(url) {
+        window.location.href = `${url}`;
+    }
+
+    $(document).ready(() => {
+
+        $.ajax({
+            url: 'functions.php',
+            method: 'post',
+            data: {
+                'request': 'request'
+            },
+            success: (data) => {
+                $('.col-md-8').html(data);
+            }
+        });
+
+        $('#search').keyup((e) => {
+            var search = $('#search').val();
+            if (search != '') {
+                $.ajax({
+                    url: 'functions.php',
+                    method: 'post',
+                    data: {
+                        'q': search
+                    },
+                    success: (data) => {
+                        $('.search').html(data);
+
+                    }
+
+                });
+            }
+        });
+
+    });
+</script>
+
+</html>
