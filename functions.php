@@ -27,12 +27,16 @@ if(isset($_POST['page'])){
             </div>
                     <div class="second">
                           <div class="p-2"><img class="img-thumbnail rounded" src="./toonstore/'.$rowz->logo.'" style="width:40px;height:40px;padding:2px;"><small style="padding:3px"><a href="" >'.$rowz->username.'</a></small> </div>
-                          <p class="p-2">'.$row->caption.'</p>
+                          <p class="p-2">'.$row->caption.'</p><hr>
                           <ol>
                           <li><i class="fa fa-heart"></i></li>
                           <li><i class="fa fa-comment"></i></li>
                             <li><i class="fa fa-share"></i></li>
-                        </ol>
+                        </ol><hr>
+                        <form class="form-group" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="postid" value="'.$row->id.'">
+                        <input type="text" name="comment" placeholder="comments" class="form-control">
+                        </form>
                     </div>
                     </div></a><br>
             ';
@@ -46,12 +50,16 @@ if(isset($_POST['page'])){
                 </div>
                         <div class="second p-3">
                               <div class="p-2"><img class="img-thumbnail rounded" src="./toonstore/man.png" style="width:40px;height:40px;padding:2px;"><small style="padding:3px"><a href="" >'.$rowz->username.'</a></small> </div>
-                              <p class="p-2">'.$row->caption.'</p>
+                              <p class="p-2">'.$row->caption.'</p><hr>
                               <ol>
                               <li><i class="fa fa-heart"></i></li>
                             <li><i class="fa fa-comment"></i></li>
                             <li><i class="fa fa-share"></i></li>
-                              </ol>
+                              </ol><hr>
+                              <form class="form-group" method="post" enctype="multipart/form-data">
+                              <input type="hidden" name="postid" value="'.$row->id.'">
+                              <input type="text" name="comment" placeholder="comments" class="form-control">
+                              </form>
                         </div>
                         </div></a><br>
                 ';
@@ -70,11 +78,17 @@ if(isset($_POST['page'])){
                     <div class="second p-3">
                           <div class="p-2"><img class="img-thumbnail rounded" src="./toonstore/'.$rowz->logo.'" style="width:40px;height:40px;padding:2px;"><small style="padding:3px"><a href="" >'.$rowz->username.'</a></small> </div>
                           <p class="p-2">'.$row->caption.'</p>
+                          <hr>
                           <ol>
                           <li><i class="fa fa-heart" onlick="alertid()"></i></li>
                           <li><i class="fa fa-comment"></i></li>
                             <li><i class="fa fa-share"></i></li>
                         </ol>
+                        <hr>
+                        <form class="form-group" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="postid" value="'.$row->id.'">
+                        <input type="text" name="comment" placeholder="comments" class="form-control">
+                        </form>
                     </div>
                     </div></a><br>
             ';
@@ -89,11 +103,16 @@ if(isset($_POST['page'])){
                         <div class="second p-3">
                               <div class="p-2"><img class="img-thumbnail rounded" src="./toonstore/man.png" style="width:40px;height:40px;padding:2px;"><small style="padding:3px"><a href="" >'.$rowz->username.'</a></small> </div>
                               <p class="p-2">'.$row->caption.'</p>
+                              <hr>
                               <ol>
                               <li><i class="fa fa-heart"></i></li>
                               <li><i class="fa fa-comment"></i></li>
                                 <li><i class="fa fa-share"></i></li>
-                            </ol>
+                            </ol><hr>
+                            <form class="form-group" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="postid" value="'.$row->id.'">
+                            <input type="text" name="comment" placeholder="comments" class="form-control">
+                            </form>
                         </div>
                         </div></a><br>
                 ';
@@ -135,12 +154,16 @@ if(isset($_POST['page'])){
             </div>
                     <div class="second">
                           <div class="p-2"><img class="img-thumbnail rounded" src="./toonstore/'.$rowz->logo.'" style="width:40px;height:40px;padding:2px;"><small style="padding:3px"><a href="" >'.$rowz->username.'</a></small> </div>
-                          <p class="p-2">'.$row->caption.'</p>
+                          <p class="p-2">'.$row->caption.'</p><hr>
                           <ol>
                           <li><i class="fa fa-heart p-2 i"></i></li>
                           <li><i class="fa fa-comment p-2 i"></i></li>
                             <li><i class="fa fa-share p-2 i"></i></li>
-                        </ol>
+                        </ol><hr>
+                        <form class="form-group" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="postid" value="'.$row->id.'">
+                        <input type="text" name="comment" placeholder="comments" class="form-control">
+                        </form>
                     </div>
                     </div></a><br>
             ';
@@ -154,12 +177,16 @@ if(isset($_POST['page'])){
                 </div>
                         <div class="second p-3">
                               <div class="p-2"><img class="img-thumbnail rounded" src="./toonstore/man.png" style="width:40px;height:40px;padding:2px;"><small style="padding:3px"><a href="" >'.$rowz->username.'</a></small> </div>
-                              <p class="p-2">'.$row->caption.'</p>
+                              <p class="p-2">'.$row->caption.'</p><hr>
                               <ol>
                               <li><i class="fa fa-heart p-2 i"></i></li>
                               <li><i class="fa fa-comment p-2 i"></i></li>
                                 <li><i class="fa fa-share p-2 i"></i></li>
-                            </ol>
+                            </ol><hr>
+                            <form class="form-group" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="postid" value="'.$row->id.'">
+                            <input type="text" name="comment" placeholder="comments" class="form-control">
+                            </form>
                         </div>
                         </div></a><br>
                 ';
@@ -178,11 +205,17 @@ if(isset($_POST['page'])){
                     <div class="second p-3">
                           <div class="p-2"><img class="img-thumbnail rounded" src="./toonstore/'.$rowz->logo.'" style="width:40px;height:40px;padding:2px;"><small style="padding:3px"><a href="" >'.$rowz->username.'</a></small> </div>
                           <p class="p-2">'.$row->caption.'</p>
+                          <hr>
                           <ol>
                           <li><i class="fa fa-heart p-2 i"></i></li>
                           <li><i class="fa fa-comment p-2 i"></i></li>
                             <li><i class="fa fa-share p-2 i"></i></li>
                         </ol>
+                        <hr>
+                        <form class="form-group" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="postid" value="'.$row->id.'">
+                        <input type="text" name="comment" placeholder="comments" class="form-control">
+                        </form>
                     </div>
                     </div></a><br>
             ';
@@ -197,11 +230,16 @@ if(isset($_POST['page'])){
                         <div class="second p-3">
                               <div class="p-2"><img class="img-thumbnail rounded" src="./toonstore/man.png" style="width:40px;height:40px;padding:2px;"><small style="padding:3px"><a href="" >'.$rowz->username.'</a></small> </div>
                               <p class="p-2">'.$row->caption.'</p>
+                              <hr>
                               <ol>
                               <li><i class="fa fa-heart p-2 i"></i></li>
                               <li><i class="fa fa-comment p-2 i"></i></li>
                                 <li><i class="fa fa-share p-2 i"></i></li>
-                            </ol>
+                            </ol><hr>
+                            <form class="form-group" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="postid" value="'.$row->id.'">
+                            <input type="text" name="comment" placeholder="comments" class="form-control">
+                            </form>
                         </div>
                         </div></a><br>
                 ';
@@ -700,11 +738,17 @@ echo 'query error'.mysqli_error($query);
                             <a href="" class="card-header" style="display:flex;align-items:center;"><img src="toonstore/'.$row2->logo.'" style="width:40px;height:40px;border-radius:100%;" class="ml-3"><h6>'.$row2->username.'</h6></a>
                             <a href="viewpost.php?post_id='.$row->id.'" class="copy"><video src="toonstore/'.$row->toon.'" class="card-body" width="100%" controls></a>
                             <div class="card-footer">
+                            <hr>
                             <ol>
                             <li><i class="fa fa-heart"></i></li>
                             <li><i class="fa fa-comment"></i></li>
                               <li><i class="fa fa-share"></i></li>
                             </ol>
+                            <hr>
+                            <form class="form-group" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="postid" value="'.$row->id.'">
+                            <input type="text" name="comment" placeholder="comments" class="form-control">
+                            </form>
                             </div>
                             </div>
                             ';
@@ -714,11 +758,17 @@ echo 'query error'.mysqli_error($query);
                             <a href="" class="card-header" style="display:flex;align-items:center;"><img src="toonstore/man.png" style="width:40px;height:40px;border-radius:100%;" class="ml-3"><h6>'.$row2->username.'</h6></a>
                             <a href="viewpost.php?post_id='.$row->id.'"viewpost.php" class="copy"><video src="toonstore/'.$row->toon.'" class="card-body" width="100%" height="100px" controls></a>
                             <div class="card-footer">
+                            <hr>
                             <ol>
                             <li><i class="fa fa-heart"></i></li>
                           <li><i class="fa fa-comment"></i></li>
                             <li><i class="fa fa-share"></i></li>
                             </ol>
+                            <hr>
+                            <form class="form-group" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="postid" value="'.$row->id.'">
+                            <input type="text" name="comment" placeholder="comments" class="form-control">
+                            </form>
                             </div>
                             </div>
                             ';
@@ -927,11 +977,17 @@ if(!in_array($ext,$allowed)){
                 <div class="second m-3">
                       <div class="p-2"><img class="img-thumbnail rounded" src="./toonstore/'.$rowz->logo.'" style="width:40px;height:40px;padding:2px;"><small style="padding:3px"><a href="" >'.$rowz->username.'</a></small> </div>
                       <p class="p-2">'.$row->caption.'</p>
+                      <hr>
                       <ol>
                       <li><i class="fa fa-heart"></i></li>
                       <li><i class="fa fa-comment"></i></li>
                         <li><i class="fa fa-share"></i></li>
                     </ol>
+                    <hr>
+                    <form class="form-group" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="postid" value="'.$row->id.'">
+                            <input type="text" name="comment" placeholder="comments" class="form-control">
+                            </form>
                 </div>
                 </div></a><br>
         ';
@@ -946,11 +1002,17 @@ if(!in_array($ext,$allowed)){
                     <div class="second m-3">
                           <div class="p-2"><img class="img-thumbnail rounded" src="./toonstore/man.png" style="width:40px;height:40px;padding:2px;"><small style="padding:3px"><a href="" >'.$rowz->username.'</a></small> </div>
                           <p class="p-2">'.$row->caption.'</p>
+                          <hr>
                           <ol>
                           <li><i class="fa fa-heart"></i></li>
                           <li><i class="fa fa-comment"></i></li>
                             <li><i class="fa fa-share"></i></li>
                         </ol>
+                        <hr>
+                        <form class="form-group" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="postid" value="'.$row->id.'">
+                            <input type="text" name="comment" placeholder="comments" class="form-control">
+                            </form>
                     </div>
                     </div></a><br>
             ';
@@ -967,11 +1029,17 @@ if(!in_array($ext,$allowed)){
                 <div class="second m-3">
                       <div class="p-2"><img class="img-thumbnail rounded" src="./toonstore/'.$rowz->logo.'" style="width:40px;height:40px;padding:2px;"><small style="padding:3px"><a href="" >'.$rowz->username.'</a></small> </div>
                       <p class="p-2">'.$row->caption.'</p>
+                      <hr>
                       <ol>
                       <li><i class="fa fa-heart"></i></li>
                       <li><i class="fa fa-comment"></i></li>
                         <li><i class="fa fa-share"></i></li>
                     </ol>
+                    <hr>
+                    <form class="form-group" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="postid" value="'.$row->id.'">
+                        <input type="text" name="comment" placeholder="comments" class="form-control">
+                        </form>
                 </div>
                 </div></a><br>
         ';
@@ -986,11 +1054,17 @@ if(!in_array($ext,$allowed)){
                     <div class="second m-3">
                           <div class="p-2"><img class="img-thumbnail rounded" src="./toonstore/man.png" style="width:40px;height:40px;padding:2px;"><small style="padding:3px"><a href="" >'.$rowz->username.'</a></small> </div>
                           <p class="p-2">'.$row->caption.'</p>
+                          <hr>
                           <ol>
                           <li><i class="fa fa-heart"></i></li>
                           <li><i class="fa fa-comment"></i></li>
                             <li><i class="fa fa-share"></i></li>
                         </ol>
+                        <hr>
+                        <form class="form-group" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="postid" value="'.$row->id.'">
+                            <input type="text" name="comment" placeholder="comments" class="form-control">
+                            </form>
                     </div>
                     </div></a><br>
             ';
