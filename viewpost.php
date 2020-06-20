@@ -39,49 +39,14 @@
             color: antiquewhite;
             padding: 5px;
         }
-        div.main {
-            width: 100%;
-            background-color: whitesmoke;
-            box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 6px 20px 0px rgba(0, 0, 0, 0.19);
-        }
-        
-        div.people {
-            width: 100%;
-            background-color: rgb(248, 245, 245);
-            box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 6px 20px 0px rgba(0, 0, 0, 0.19);
-            height: 100px;
-            margin-bottom: 25px;
-        }
-        
-        div.people a:hover {
-            text-decoration: none;
-            cursor: pointer;
-        }
-        
-        div.people a img {
-            height: 70%;
-        }
-        
-        div.seconds {
-            background-color: whitesmoke;
-            padding: 7px 5px;
-        }    
+       
         
         @media only screen and (max-width:500px) {
-            #menu {
-                color: tomato;
-                font-size: 1.7em;
-                list-style-type: none;
-                float: right;
-                margin-top: -42px;
-            }
+          
             img {
                 width: 100%;
                 height: 200px;
                 margin-top: -7.5px;
-            }
-            div.main {
-                margin-bottom: 10px;
             }
             footer {
                 display: flex;
@@ -121,32 +86,18 @@
                 padding: 2px;
                 align-items: center;
                 float: right;
-                margin-top: -13%;
-                margin-left: -40%;
+                margin-top: -10%;
             }
         }
         
         @media only screen and (min-width:500px) {
-            #menu {
-                color: tomato;
-                font-size: 1.7em;
-                list-style-type: none;
-                float: right;
-                margin-top: -42px;
-            }
+           
             img {
                 width: 100%;
                 height: 350px;
                 margin-top: -7.5px;
             }
-            #search {
-                position: absolute;
-                width: 53%;
-                margin-left: 300px;
-                margin-top: -40px;
-                background-color: rgb(229, 236, 236);
-            }
-
+           
             footer {
                 display: flex;
                 background-color: rgb(129, 136, 158);
@@ -187,23 +138,12 @@
                 align-items: center;
                 float: right;
                 margin-top: -3.5%;
-                margin-left: -40%;
             }
             
         }
-        
-        div.second {
-            padding: 10px 20px;
-        }    
-        #menu p {
-            color: teal;
-            opacity: 2;
-        }
+
         video{
             width:100%;
-        }
-        .col-md-8{
-            margin-top:-60px;
         }
      .headicon   .fa{
             color: tomato;
@@ -214,19 +154,20 @@
 <body>
     <header>
         <nav class="navbar-inverse">
+            <div class="container">
             <h4 class="brand"> graphers</h4>
             <div class="headicon">
                 <i class="fa fa-search m-2" onclick="openurl('searchpage.html')"></i>
                 <i class="fa fa-film m-2" onclick="openurl('videopage.html')"></i>
                 <i class="fa fa-envelope m-2" onclick="openurl('messages.php')"></i>
                 <i class="fa fa-bell m-2"></i>
-                <h6 id="menu" class="m-2">&#9777; </h6>
             </div>
-        </nav><br><br>
+            </div>
+        </nav>
     </header>
     <div class="container">
         <div class="row">
-<div class="col-md-8  ml-auto mr-auto">
+<div class="col-md-6  ml-auto mr-auto">
 <?php
 
 if(isset($_GET["post_id"])){
